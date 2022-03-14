@@ -78,8 +78,8 @@ string mat(int col,int row,char symb1 , char symb2){
                     matrix1[i][start_col]=symb2;}     
         }
             start_col++; 
-        turn=!turn;
-    }
+        turn=!turn; //Change the symb for the next iteration
+    } 
     //copy the matrix to a String
     for (int i = 0; i < row; i++)
     {
