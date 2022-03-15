@@ -41,9 +41,9 @@ string mat(int col,int row,char symb1 , char symb2){
         for (int i = start_col; i <= end_col; i++)
         {
             if(turn){
-                matrix1[start_row][i]=symb1;}
+                 matrix1.at(start_row).at(i)=symb1;}
             else{
-                matrix1[start_row][i]=symb2;}
+                matrix1.at(start_row).at(i)=symb2;}
         }
 
         start_row++;
@@ -52,9 +52,9 @@ string mat(int col,int row,char symb1 , char symb2){
         for (int i = start_row; i <= end_row; i++)
         {   
             if(turn){
-                matrix1[i][end_col]=symb1;}
+                matrix1.at(i).at(end_col)=symb1;}
             else{
-                matrix1[i][end_col]=symb2;}
+                matrix1.at(i).at(end_col)=symb2;}
         }
         
         end_col--;
@@ -63,9 +63,9 @@ string mat(int col,int row,char symb1 , char symb2){
             for (int i = end_col; i >= start_col; i--)
             {
                 if(turn){
-                    matrix1[end_row][i]=symb1;}
+                     matrix1.at(end_row).at(i)=symb1;}
                 else{
-                    matrix1[end_row][i]=symb2;}    
+                    matrix1.at(end_row).at(i)=symb2;}    
         }
             end_row--;
 
@@ -73,9 +73,9 @@ string mat(int col,int row,char symb1 , char symb2){
             for (int i = end_row; i >= start_row; i--)
             {
                 if(turn){
-                    matrix1[i][start_col]=symb1;}
+                    matrix1.at(i).at(start_col)=symb1;}
                 else{
-                    matrix1[i][start_col]=symb2;}     
+                    matrix1.at(i).at(start_col)=symb2;}     
         }
             start_col++; 
         turn=!turn; //Change the symb for the next iteration
@@ -85,7 +85,7 @@ string mat(int col,int row,char symb1 , char symb2){
     {
         for (int j = 0; j < col; j++)
         {
-            ans+=matrix1[i][j];
+            ans+=matrix1.at(i).at(j);
         }
             ans+="\n";
     }
